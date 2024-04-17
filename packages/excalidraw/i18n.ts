@@ -14,11 +14,12 @@ export interface Language {
 
 export type TranslationKeys = NestedKeyOf<typeof fallbackLangData>;
 
-export const defaultLang = { code: "en", label: "English" };
+export const defaultLang = { code: "zh-CN", label: "简体中文" };
 
 export const languages: Language[] = [
   defaultLang,
   ...[
+    { code: "en", label: "English" },
     { code: "ar-SA", label: "العربية", rtl: true },
     { code: "bg-BG", label: "Български" },
     { code: "ca-ES", label: "Català" },
@@ -59,7 +60,6 @@ export const languages: Language[] = [
     { code: "sl-SI", label: "Slovenščina" },
     { code: "tr-TR", label: "Türkçe" },
     { code: "uk-UA", label: "Українська" },
-    { code: "zh-CN", label: "简体中文" },
     { code: "zh-TW", label: "繁體中文" },
     { code: "vi-VN", label: "Tiếng Việt" },
     { code: "mr-IN", label: "मराठी" },
