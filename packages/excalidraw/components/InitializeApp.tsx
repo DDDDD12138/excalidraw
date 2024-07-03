@@ -20,7 +20,9 @@ export const InitializeApp = (props: Props) => {
       setLoading(false);
     };
     const currentLang =
-      languages.find((lang) => lang.code === props.langCode) || defaultLang;
+      languages.find((lang) => lang.code.startsWith(props.langCode)) ||
+      defaultLang;
+
     updateLang();
   }, [props.langCode]);
 
